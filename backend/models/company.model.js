@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 const comapnySchema = new mongoose.Schema({
     name: {
         type: String, 
-        required: true
+        required: true,
+        unique: true
     },
     description: {
         type: String,
@@ -24,4 +25,4 @@ const comapnySchema = new mongoose.Schema({
     }
 }, {timestamps: true})
 
-export const Comapny = mongoose.model("Company", comapnySchema)
+export const Company = mongoose.model("Company", comapnySchema)
